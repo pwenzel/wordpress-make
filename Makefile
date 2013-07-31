@@ -14,8 +14,7 @@ composer-install:
 development:
 	vendor/bin/wp core config --dbname=example --dbuser=root --dbpass=root
 	vendor/bin/wp core install --url="http://localhost/example" --title="$(TITLE) DEV" --admin_name=$(ADMIN) --admin_email=$(ADMIN_EMAIL) --admin_password=w00t
-	cp config/htaccess.development .htaccess
-	
+
 # staging:
 #         ./wp core config --dbname=example --dbuser=changeme --dbpass=changeme
 #         ./wp core install --url="http://stage.example.com" --title="$(TITLE)" --admin_name=$(ADMIN) --admin_email=$(ADMIN_EMAIL) --admin_password=changeme
@@ -30,7 +29,8 @@ application: plugins
 	@vendor/bin/wp theme delete twentyeleven
 	@vendor/bin/wp plugin delete hello
 	@vendor/bin/wp plugin delete akismet
-	@vendor/bin/wp rewrite structure "/%year%/%monthnum%/%postname%/"
+	vendor/bin/wp rewrite structure "/%year%/%monthnum%/%postname%/"
+	vendor/bin/wp eval-file tools/generate-htaccess.php
 
 plugins:
 	@vendor/bin/wp plugin install wp-less --version=1.5.3 --activate	
