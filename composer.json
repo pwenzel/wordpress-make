@@ -52,7 +52,8 @@
     },
 
     "config": {
-        "preferred-install": "dist"
+        "preferred-install": "dist",
+        "bin-dir": "vendor/bin"
     },
     "scripts": {
         "post-install-cmd": [  
