@@ -1,4 +1,4 @@
-xENVIRONMENT?=development
+ENVIRONMENT?=development
 TITLE?=Example Project
 ADMIN=pwenzel
 ADMIN_EMAIL=paul@co-opmedia.org
@@ -36,6 +36,9 @@ plugins:
 	vendor/bin/wp rewrite structure "/%year%/%monthnum%/%postname%/"
 	vendor/bin/wp eval-file tools/generate-htaccess.php
 	cat vendor/h5bp/server-configs-apache/.htaccess >> .htaccess
+
+test:
+	vendor/bin/phpunit
 
 clean-db:
 	vendor/bin/wp db reset

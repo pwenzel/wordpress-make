@@ -11,7 +11,7 @@ Generate a Wordpress installation without clicking. Its special sauce is a mixtu
 
 First, clone this repository.
 
-Assuming a local installation, run the following commands:
+On your local machine, run the following commands:
 
 	echo "CREATE DATABASE IF NOT EXISTS example" | mysql -u root -p; 
 	make

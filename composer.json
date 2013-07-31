@@ -29,12 +29,24 @@
                     "type": "zip"
                 }
             }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "simplehtmldom",
+                "version": "1.5",
+                "dist": {
+                    "url": "http://downloads.sourceforge.net/project/simplehtmldom/simplehtmldom/1.5/simplehtmldom_1_5.zip",
+                    "type": "zip"
+                }
+            }
         }
     ],   
     "require": {
         "php": ">=5.3",
         "wp-cli/wp-cli": "v0.10.2",
         "phpunit/phpunit": "3.7.*",
+        "simplehtmldom": "1.5",
         "thomasgriffin/TGM-Plugin-Activation": "2.3.4",
         "h5bp/server-configs-apache": "dev-master"
     },
