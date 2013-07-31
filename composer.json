@@ -1,0 +1,27 @@
+{
+    "name": "pwenzel/sites",
+    "description": "My example Wordpress project",
+    "authors": [
+        {
+            "name": "Paul Wenzel",
+            "email": "paul@pwenzel.info"
+        }
+    ],
+    "require": {
+        "wp-cli/wp-cli": "v0.10.2",
+        "phpunit/phpunit": "3.7.*"
+    },
+    "config": {
+        "preferred-install": "dist"
+    },
+    "scripts": {
+        "post-install-cmd": [  
+        ],
+        "pre-update-cmd": [
+        ],
+        "post-update-cmd": [
+        ],
+        "post-create-project-cmd": [
+        ]
+    }
+}
