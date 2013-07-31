@@ -16,6 +16,7 @@
     },
     "scripts": {
         "post-install-cmd": [  
+            "vendor/bin/wp core download"
         ],
         "pre-update-cmd": [
         ],
