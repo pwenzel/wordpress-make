@@ -5,7 +5,7 @@ ADMIN_EMAIL=paul@co-opmedia.org
 
 .PHONY: install
 
-install: composer-install $(ENVIRONMENT) application
+install: composer-install $(ENVIRONMENT) 
 
 composer-install:
 	@composer install
@@ -23,6 +23,8 @@ development:
 #         ./wp core install --url="http://example.com" --title="$(TITLE)" --admin_name=$(ADMIN) --admin_email=$(ADMIN_EMAIL) --admin_password=changeme
 
 application:
+	vendor/bin/wp theme activate example
+	vendor/bin/wp theme delete twentytwelve
 	vendor/bin/wp theme delete twentyeleven
 	vendor/bin/wp plugin delete hello
 	vendor/bin/wp plugin delete akismet
