@@ -1,10 +1,14 @@
 <?php
+
 global $wp_rewrite;
 
 $file = ".htaccess";
+$rules = $wp_rewrite->mod_rewrite_rules();
 
-$rules = "# BEGIN WordPress
-$wp_rewrite->mod_rewrite_rules();
-# END WordPress";
+$output = "# BEGIN WordPress
+".$rules."
+# END WordPress
 
-file_put_contents($file, $rules);
+";
+
+file_put_contents($file, $output);

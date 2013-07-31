@@ -23,17 +23,20 @@ development:
 #         ./wp core config --dbname=example --dbuser=changeme --dbpass=changeme
 #         ./wp core install --url="http://example.com" --title="$(TITLE)" --admin_name=$(ADMIN) --admin_email=$(ADMIN_EMAIL) --admin_password=changeme
 
-application: plugins
+application: plugins .htaccess
 	@vendor/bin/wp theme activate example 
 	@vendor/bin/wp theme delete twentytwelve
 	@vendor/bin/wp theme delete twentyeleven
 	@vendor/bin/wp plugin delete hello
 	@vendor/bin/wp plugin delete akismet
 	vendor/bin/wp rewrite structure "/%year%/%monthnum%/%postname%/"
-	vendor/bin/wp eval-file tools/generate-htaccess.php
 
 plugins:
 	@vendor/bin/wp plugin install wp-less --version=1.5.3 --activate	
+
+.htaccess: 
+	vendor/bin/wp eval-file tools/generate-htaccess.php
+	cat vendor/h5bp/server-configs-apache/.htaccess >> .htaccess
 
 clean-db:
 	vendor/bin/wp db reset

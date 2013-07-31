@@ -18,13 +18,25 @@
                     "type": "zip"
                 }
             }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "h5bp/server-configs-apache",
+                "version": "dev-master",
+                "dist": {
+                    "url": "https://github.com/h5bp/server-configs-apache/archive/master.zip",
+                    "type": "zip"
+                }
+            }
         }
     ],   
     "require": {
         "php": ">=5.3",
         "wp-cli/wp-cli": "v0.10.2",
         "phpunit/phpunit": "3.7.*",
-        "thomasgriffin/TGM-Plugin-Activation": "2.3.4"
+        "thomasgriffin/TGM-Plugin-Activation": "2.3.4",
+        "h5bp/server-configs-apache": "dev-master"
     },
 
     "config": {
