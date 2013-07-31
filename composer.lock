@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "ff2da4791cfd3e3ff1cba6b3cfcfe7eb",
+    "hash": "34c373de4f6c5de4cdfe70af7cdf57de",
     "packages": [
         {
             "name": "mustache/mustache",
@@ -457,6 +457,17 @@
             "time": "2013-07-11 19:36:36"
         },
         {
+            "name": "thomasgriffin/TGM-Plugin-Activation",
+            "version": "2.3.4",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/thomasgriffin/TGM-Plugin-Activation/archive/v2.3.4.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "library"
+        },
+        {
             "name": "wp-cli/php-cli-tools",
             "version": "v0.9.3",
             "source": {
@@ -547,17 +558,6 @@
                 "wordpress"
             ],
             "time": "2013-06-26 09:44:56"
-        },
-        {
-            "name": "wp-less",
-            "version": "1.4.2",
-            "dist": {
-                "type": "zip",
-                "url": "http://downloads.wordpress.org/plugin/wp-less.1.4.2.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "type": "library"
         }
     ],
     "packages-dev": [
@@ -570,9 +570,9 @@
     "stability-flags": [
 
     ],
-    "platform": [
-
-    ],
+    "platform": {
+        "php": ">=5.3"
+    },
     "platform-dev": [
 
     ]
