@@ -6,7 +6,6 @@ ADMIN_EMAIL=paul@co-opmedia.org
 .PHONY: install
 
 install: composer-install $(ENVIRONMENT) application
-	@echo "See README.md for final installation steps."
 
 composer-install:
 	@composer install
