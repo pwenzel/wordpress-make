@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "ad7b8bb3493e555e323685ea6499749e",
+    "hash": "ff2da4791cfd3e3ff1cba6b3cfcfe7eb",
     "packages": [
         {
             "name": "mustache/mustache",
@@ -547,6 +547,17 @@
                 "wordpress"
             ],
             "time": "2013-06-26 09:44:56"
+        },
+        {
+            "name": "wp-less",
+            "version": "1.4.2",
+            "dist": {
+                "type": "zip",
+                "url": "http://downloads.wordpress.org/plugin/wp-less.1.4.2.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "library"
         }
     ],
     "packages-dev": [

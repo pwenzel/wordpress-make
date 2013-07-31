@@ -32,7 +32,7 @@ application:
 clean-db:
 	vendor/bin/wp db reset
 
-clean: clean-db
+clean: 
 	@rm -rf vendor;
 	@rm -rf wp-admin wp-includes readme.html license.txt wp-config.php wp-activate.php wp-config-sample.php wp-login.php wp-trackback.php wp-blog-header.php wp-cron.php wp-mail.php wp-comments-post.php wp-links-opml.php wp-settings.php wp-load.php wp-signup.php xmlrpc.php index.php
 	@rm -rf wp-content/plugins/*

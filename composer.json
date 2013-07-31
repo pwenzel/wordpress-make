@@ -7,9 +7,23 @@
             "email": "paul@pwenzel.info"
         }
     ],
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "wp-less",
+                "version": "1.4.2",
+                "dist": {
+                    "url": "http://downloads.wordpress.org/plugin/wp-less.1.4.2.zip",
+                    "type": "zip"
+                }
+            }
+        }
+    ],   
     "require": {
         "wp-cli/wp-cli": "v0.10.2",
-        "phpunit/phpunit": "3.7.*"
+        "phpunit/phpunit": "3.7.*",
+        "wp-less":"1.4.2"
     },
     "config": {
         "preferred-install": "dist"
