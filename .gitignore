@@ -5,3 +5,4 @@
 !wp-content/themes/example/
 !tools/
 !tests/
+!phpunit.xml
