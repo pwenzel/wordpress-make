@@ -2,3 +2,4 @@
 !composer.json
 !.gitignore
 !Makefile
+!wp-content/themes/example/
