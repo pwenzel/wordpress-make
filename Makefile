@@ -1,4 +1,4 @@
-ENVIRONMENT?=development
+xENVIRONMENT?=development
 TITLE?=Example Project
 ADMIN=pwenzel
 ADMIN_EMAIL=paul@co-opmedia.org
@@ -29,12 +29,12 @@ application: plugins .htaccess
 	@vendor/bin/wp theme delete twentyeleven
 	@vendor/bin/wp plugin delete hello
 	@vendor/bin/wp plugin delete akismet
-	vendor/bin/wp rewrite structure "/%year%/%monthnum%/%postname%/"
-
+	
 plugins:
 	@vendor/bin/wp plugin install wp-less --version=1.5.3 --activate	
 
 .htaccess: 
+	vendor/bin/wp rewrite structure "/%year%/%monthnum%/%postname%/"
 	vendor/bin/wp eval-file tools/generate-htaccess.php
 	cat vendor/h5bp/server-configs-apache/.htaccess >> .htaccess
 
