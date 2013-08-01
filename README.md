@@ -8,6 +8,7 @@ It also provides a necesssary bootstrap files for unit testing with PHPUnit.
 
 * Composer should be [installed locally](http://getcomposer.org/doc/00-intro.md#system-requirements). This may be optional in the future.
 * PHP 5.3 or greater is required for Composer. 
+* This demo assumes an installation at http://localhost/example. You can customize this in the environment targets of the Makefile.
 
 ## Usage
 
