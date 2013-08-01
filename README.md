@@ -2,6 +2,8 @@
 
 Generate a Wordpress installation without clicking. Its special sauce is a mixture of [Composer](http://getcomposer.org) and [WP-CLI](http://wp-cli.org).
 
+It also provides a necesssary bootstrap files for unit testing with PHPUnit.
+
 ## Requirements
 
 * Composer should be [installed locally](http://getcomposer.org/doc/00-intro.md#system-requirements). This may be optional in the future.
@@ -32,5 +34,5 @@ For other environments:
   
 ## Bonus
 
-* The `.htaccess` file generated includes rules from H5BP. Customize to your liking.
+* The `.htaccess` file generated includes rules from HTML5 Boilerplate. Customize to your liking.
 * TGM Plugin Activator is bundled for automating plugin tasks from within your Wordpress theme.
