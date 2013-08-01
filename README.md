@@ -36,4 +36,4 @@ For other environments:
 ## Bonus
 
 * The `.htaccess` file generated includes rules from HTML5 Boilerplate. Customize to your liking.
-* TGM Plugin Activator is bundled for automating plugin tasks from within your Wordpress theme.
+* TGM Plugin Activator will soon be bundled for automating plugin tasks from within your Wordpress theme.
