@@ -18,10 +18,12 @@ On your local machine, run the following commands:
 
 	echo "CREATE DATABASE IF NOT EXISTS example" | mysql -u root -p; 
 	make
+	make post-install
 	make test
 
-For other environments:
+Setting Other environments or options:
 
+	make URL=http://localhost/myotherproject
 	make ENVIRONMENT=staging
 	make ENVIRONMENT=production
 
@@ -29,7 +31,7 @@ For other environments:
 
 1. Composer installs WP-CLI, PHPUnit, and a few other dependencies in `vendor`.
 2. Environment-specific tasks are run next. By default it runs the *development* environment task, setting up a `wp-config.php` file and installing tables in your database. *Staging* and *production* are other optional targets.
-3. Plugins are installed. In this example, WP-LESS 1.5.3 is downloaded and activated.
+3. Plugins are installed. In this example, WP-LESS 1.4.2 is downloaded and activated.
 4. An `.htaccess` is automatically generated with the rewrite structure `/%year%/%monthnum%/%postname%/`.
 5. Unnecesssary themes and plugins are deleted.
   
