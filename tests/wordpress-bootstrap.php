@@ -1,5 +1,7 @@
 <?php
-
+// bootstrap your system
+// based on https://gist.github.com/dave1010/966439
+// 
 // HTTP_HOST is not set (as it's not Apache)
 // if (!file_exists(__DIR__ . '/tests/host')) {
 // 	echo "Error: Host file requred in '" . __DIR__ . "/host' with contents of \$_SERVER['HTTP_HOST']. Aborting";
@@ -10,7 +12,7 @@
 $_SERVER["REQUEST_METHOD"] = 'GET';
 $_SERVER["SERVER_PROTOCOL"] = 'HTTP/1.0';
 $_SERVER["SERVER_PORT"] = '80';
-$_SERVER["SERVER_NAME"] = $_SERVER["HTTP_HOST"];
+$_SERVER["SERVER_NAME"] = ( isset($_SERVER["HTTP_HOST"]) ) ? $_SERVER["HTTP_HOST"] : false;
 $_SERVER["REMOTE_ADDR"] = 'localhost';
 $_SERVER["REMOTE_PORT"] = '80';
 
@@ -39,10 +41,9 @@ while (ob_get_level()) {
 
 
 if (!defined('HIDE_BANNER')) {
-	echo "--------------------------------------\n";
-	echo "-- WordPress Command Line Interface --\n";
-	echo "-- " . get_option('siteurl') . " --\n";
-	echo "-- " . DB_USER . "@" . DB_HOST . "/" . DB_NAME . " --\n";
-	echo "--------------------------------------\n";
+	echo "------------------------------------------\n";
+	echo "Testing:  " . get_option('siteurl') . "\n";
+	echo "Database: " . DB_USER . "@" . DB_HOST . "/" . DB_NAME . "\n";
+	echo "------------------------------------------\n";
 	echo "\n";
 }
