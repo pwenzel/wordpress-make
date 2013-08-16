@@ -39,3 +39,4 @@ Setting Other environments or options:
 
 * The `.htaccess` file generated includes rules from HTML5 Boilerplate. Customize to your liking.
 * TGM Plugin Activator will soon be bundled for automating plugin tasks from within your Wordpress theme.
+* You can also trigger unit tests via web browser at http://localhost/exmaple/tests/web-runner.php
